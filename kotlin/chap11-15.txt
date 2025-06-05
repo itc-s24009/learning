@@ -1,0 +1,165 @@
+chap11
+
+ifの式
+if(条件式かBoolean型){
+
+}else{
+
+}
+trueならif(){}の中が実行される
+falseならelse{}の中が実行される
+if(){
+
+}elif(){
+
+}else{
+
+}
+実行されるコードは、上から見てtrueの一つのまとまりだけ。
+ifの条件がtrueなら、その下のelif,elseは実行されない
+ifがfalseなら、elifに下がり、trueなら実行、elseは実行されない
+elseより上の条件がfalseなら、elseのコードを実行する
+
+val x = if(){
+    println('x')
+    "xxx"
+}else{
+
+}
+println(x)
+出力結果↓
+x
+xxx
+
+あのように、変数にifを代入することができる
+println('x')→実行される
+"xxx"→、変数に代入され、printlnにより出力される
+
+
+chap12
+
+複数を同時にifすることができる
+val x = 1
+when(x){
+    1 -> println('1')
+    2 -> println('2')
+    3 -> println('3')
+    4,5 -> println("4,5")
+    else -> println("その他")
+}
+4,5のように、同じ出力にする場合、まとめて条件に組み込める
+これも上から見て最初のtrueのみ実行される
+elseは絶対に入れなければならない
+
+val x = 1
+when(x){
+    1 -> {
+        println('1')
+        println('one')
+        }
+}
+のように{}で囲み、複数のコードを入れることができる
+
+val x = 1
+val y = when(x){
+    1 -> '1'
+}
+println(y)
+のように、whenも変数に入れれる
+しかし、{}での複数のコードを入れるのはできない
+
+val x = 1
+val y = when{
+    (x==1) -> '1'
+    (x==2 || x==3) -> "2,3"
+    else -> "s"
+}
+println(y)
+のように、whenの後ではなく、それぞれの実行結果の前に()を使って条件を書くこともできる
+
+
+chap13
+
+繰り返し構文　for
+
+for(i in 0..10){
+    println(i)
+}
+
+のようにすると、0から10がそれぞれ出力できる
+
+10..0のように、降順ではできない
+そこで
+10 downTo 0
+とすると、10から0に下がっていくことができる
+
+10 downTo 0 
+10から0に下がっていく際に、10,9,8と1ずつ減っている
+これを、2ずつにしたい、10,8,6としたい場合、
+10 downTo 0step 2
+と表現する（0..10にも使える）
+
+0..10 は、0 until 11 と表せれる
+
+
+chap14
+
+繰り返し構文　while
+
+while(条件式){
+
+}
+条件式がtrueの間繰り返し続ける
+使用例
+var x = 0
+for(i < 10){
+    println(i)
+    i++
+}
+
+whileは、「条件の確認→trueなら実行する」なので、whileに入る前にfalseなら、何も実行されない
+これを、「実行する→trueなら繰り返さない」のように、順番を入れ替えるには
+do{
+
+}while(条件式)
+とすると
+
+
+chap15
+
+breakとcontinue
+
+例えば、
+white(true){
+    val value = Random().nextInt(100)
+    println("乱数：${value}")
+}
+としたとき、無限に繰り返されてしまう
+
+そこにwhite(true){
+    val value = Random().nextInt(100)
+    println("乱数：${value}")
+    if(条件式) break
+}
+
+のように、条件がtrueなら、breakとすると、breakが実行されたとき、breakを含む繰り返しを止めることができる
+breakのある場所で止まるため、breakより下のコードも実行されなくなる
+
+white(true){
+    val value = Random().nextInt(100)
+    println("乱数：${value}")
+    if(i == 3) continue
+}
+のようにすると、条件式がtrueのときの繰り返しをスキップして、次の繰り返しに進む。
+
+white(i in 1..5){
+    if(i == 3) continue
+    println(i)
+}
+の場合、出力は
+1
+2
+4
+5
+となる。
+なぜなら、i==3のとき、continueより下のコードはスキップして、次の繰り返しに行くから。

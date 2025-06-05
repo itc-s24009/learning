@@ -1,0 +1,71 @@
+chap6
+
+Boolean　真偽を判定する型（true/false）
+
+val x : Boolean = (条件式)
+val x = (条件式)
+()は無くても良い
+条件式の演算子はpythonなどと同じ
+xにtrueかfalseが入る
+
+
+chap7
+
+val x = true
+と、直接真偽を入れることができる
+
+val x : Boolean = (x && y)
+xとyのどちらもtrueならtrueが入る。それ以外はfalse。俗に言うAND演算
+val x : Boolean = (x || y)
+xとyのどちらかがtrueならtrueが入る。どちらもfalseならfalse。俗に言うOR演算
+
+(条件式 && 条件式)のような使いかたもできる
+
+val x = true
+val y = !x
+!に、notの意味があり、yはfalseになる
+
+
+chap8
+型の変換
+
+val x = 変数名.to型名()
+val x = y.toInt()
+
+
+val y = 10000
+val x = y.toByte(); →　x = -96
+Byteは-127~127までしか扱えないため、それを超えると変な数字が出る
+
+
+chap9
+
+変数（型指定、変更可能）：var 変数名 : 型名 = 代入内容
+変数（変更可能） ：var 変数名 = 代入内容
+
+val x = 1
+x = 2
+はできない
+
+var x = 1
+x = 2
+はできる
+
+varの場合、x += 1 などもできる
+
+
+chap10
+
+日本語で言う、0から10、0〜10
+val a = 0..10
+型はIntRange
+val a : IntRange = 0..10
+
+val x : Boolean = y in 0..10
+yが0から10に含まれているかのboolean型
+val x : Boolean = y !in 0..10
+否定の仕方
+
+'あ'..'お'→あ〜お
+'A'..'E'→A〜E
+のような、文字にも当てはめれる
