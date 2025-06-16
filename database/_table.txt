@@ -1,0 +1,72 @@
+chap1
+・SELECT FROM WHERE の条件付き表出力
+・UPDATE SET WHERE の条件付きデータ更新
+・INSERT INTO VALUE のデータ追加
+・DELETE FROM WHERE の条件付きデータ削除
+
+
+chap2
+・コメントの代入
+・表示名の提示
+・INSERT() VALUE による、列指定のデータ追加
+
+
+chap3
+・WHERE での演算子まとめ
+・NULLについて
+・WHERE IN,WHERE ANY,WHERE,ALL の、複数との比較条件式
+・WHERE AND の、複数の条件式
+・WHERE NOT の、否定条件式
+・OR,ANDの使いかた、優先順位
+・主キーについて
+
+
+chap4
+・SELECT DISTINCT による重複の取り除き
+・ORDER BY による並べ替え
+・OFFSET ROWS FETCH NEXT による、上部の除外、除外後の表示個数の指定
+・LIMIT　による、表示個数指定
+・UNION による、複数テーブルからの出力結果の合成
+・EXCEPT,INTERSECT による、テーブル同士の比較、出力
+
+
+chap5
+・列名、計算式、固定値について
+・計算式の使いかた
+・単語結合の演算子「||」
+・CASE WHEN THEN ELSE END AS による、文字の置き換えや、条件に寄る置き換えと、その出力
+・関数の使いかた
+・LENGTH()　関数の、列数の出力と利用法
+・TRIM() による、空白の削除
+・REPLACE() による、文字の入れ替え
+・SUBSTRING() LIKE による、文字数指定の出力
+・CONTACT() による、文字数連結
+・ROUND() による、四捨五入
+・POWER() による、べき乗
+・CURRENT_TIMESTAMP 等の日時の関数
+・CAST() による、値の型の変換
+・COALESCE() による、NULLじゃない最初の文字の出力と、NULLの置き換え
+
+
+chap6
+・集計演算について
+・SUM(),AVE(),MIN(),MAX() について
+・特殊な集計関数COUNT() での、行数の出力
+・GROUP BY による、グループ分けと出力
+・GROUP BY HAVING による、GROUP BY での条件式の使用
+
+
+chap7
+・SELECT内でのSELECTの使用、副問い合わせの使いかた
+
+
+chap8
+・テーブル同士の結合方法
+
+
+chap9
+・トランザクションとロックについて、それによるエラーの防ぎ方
+
+chap10
+・テーブルの作り方、消し方や権限について
+・テーブルを作る際に決めれる制約について

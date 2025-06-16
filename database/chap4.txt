@@ -1,0 +1,72 @@
+SELECT DISTINCT 列名
+FROM テーブル名
+
+・重複した出力を取り除いて出力する。
+
+
+SELECT 列名
+FROM テーブル名
+ORDER BY 列名 並び順,列名 並び順
+
+・BYで選んだ列名の出力の順番を並べ替える。
+・昇順 ASC 降順 DESC
+・複数指定した場合、左側を優先して並べ替える
+
+SELECT *
+FROM テーブル名
+ORDER BY 列番号 並び順
+
+・SELECTに*を使ったときは、BYでの指定に列番号を使える
+
+
+SELECT 列名
+FROM テーブル名
+ORDER BY 列名 並び順
+OFFSET 先頭から除外する行数 ROWS
+FETCH NEXT 取得行数 ROWS ONLY
+
+・OFFSETで、「上から除外する列の数」を決める
+・FETCH NEXTで、「除外されていない列の中から、表示する列の個数」を決める
+
+
+SELECT 列名
+FROM テーブル名
+ORDER BY 列名 並び順
+LIMIT 取得行数
+
+・FETCH NEXTと同じ
+
+
+SELECT 列名
+FROM テーブル名１
+UNION
+SELECT 列名
+FROM テーブル名２
+ORDER BY 列名 並び順
+
+・UNIONにより、２つのテーブルから合わせて出力する
+・重複行をまとめる。
+・(ALL)をつけると重複行をそのまま出力する
+
+
+SELECT 列名
+FROM テーブル名１
+EXCEPT
+SELECT 列名
+FROM テーブル名２
+ORDER BY 列名 並び順
+
+・テーブル名１にあって、テーブル２にない列を出力する
+・重複行をまとめる。
+・EXCEPT (ALL) にすると重複行をそのまま出力する
+
+SELECT 列名
+FROM テーブル名１
+INTERSECT
+SELECT 列名
+FROM テーブル名２
+ORDER BY 列名 並び順
+
+・テーブル名１とテーブル２のどちらにもある列を出力する
+・重複行をまとめる。
+・INTERSECT (ALL) にすると重複行をそのまま出力する

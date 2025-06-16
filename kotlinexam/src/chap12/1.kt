@@ -1,0 +1,35 @@
+package chap12
+
+fun main(){  
+    //whenでの複数の条件分岐
+    //条件を比較して、当てはまるものを実行する
+    //同時に複数の条件を指定できる
+    //()を使い、いろんな条件式を使える(「||」なども使える)
+    val x = 1
+    val y = 2
+    when(x){
+        1 -> println("1")
+        2,3 -> println("2,3")
+        (x==4) -> println("4")
+        (x==5 || z==3) -> println("5,yは3")
+        else -> println("それ以外")
+    }
+    
+    //{}で囲み、複数のコードを実行
+    when(x){
+        1 -> {
+            println("1")
+            println("いち")
+        }
+        else -> println("それ以外")
+    }
+
+    //変数にwhenを代入
+    val y = when(x){
+            1 -> "1"
+            else -> "それ以外"
+        }
+    println(y)
+
+
+}
