@@ -5,13 +5,13 @@ fun main(){
     var a = 2
     var b = 2
     if (a==b){
-        plintln("等しい")
+        println("等しい")
     }
     
     //変数に条件式を入れて活用
     val c = (a==b)
     if(c){
-        plintln("等しい")
+        println("等しい")
     }
 
     //条件式の種類
@@ -26,18 +26,18 @@ fun main(){
     //elseでの、条件に合わない場合の処理
     b = 3 // 等しくなくさせる
         if (a==b){
-        plintln("等しい")
+        println("等しい")
     }else{
-        plintln("等しくない")
+        println("等しくない")
     }
 
      // else if による条件の追加
              if (a==b){
-        plintln("等しい")
+        println("等しい")
     }else if (b>a){
-        plintln("bのほうが大きい")
+        println("bのほうが大きい")
     }else{
-        plintln("等しくない")
+        println("等しくない")
     }
 
     // 上から順に比較していき、最初のtrueのみ実行する
@@ -45,13 +45,13 @@ fun main(){
     //変数にif文を入れて活用
 
     val d = if (a==b){
-        plintln("コードの実行") 
+        println("コードの実行")
         "等しい"
     }else{
-        plintln("コードの実行")
+        println("コードの実行")
         "等しくない"
     }
-    plintln(d)
+    println(d)
 
     //if文の入った変数を出力すると、中のコードが実行されたあと、実行された部分の最後の文字列が代入され、出力される。
     

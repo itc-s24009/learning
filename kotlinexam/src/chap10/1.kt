@@ -3,7 +3,7 @@ package chap10
 fun main(){
     // 範囲指定 IntRange型
     val x : IntRange = 0..10
-    plintln(x)
+    println(x)
     // xには「０から１０」という範囲が入っている
 
     //条件式での使用

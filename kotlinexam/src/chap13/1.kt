@@ -8,7 +8,7 @@ fun main(){
     }
     
     //stepを使い、繰り返しを飛ばし飛ばし行う
-    for(i in 0..10　step 2){
+    for(i in 0..10 step 2){
         println(i)
     }
     //出力は0,2,4,6,8,10と、２つ飛ばしで行われる
