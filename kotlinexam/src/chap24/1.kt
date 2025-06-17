@@ -43,7 +43,7 @@ class Person(){
             return "${name}だよ"
         }
 
-    
+
     fun greet(){
         println("Hello")
     }
