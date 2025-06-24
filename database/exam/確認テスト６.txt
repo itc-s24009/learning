@@ -34,17 +34,13 @@ INSERT INTO テスト  (性別,国語,数学,英語) VALUES
 問題
 
 １　テストテーブルから、「国語」の合計を取得する
-select sum(国語) from テスト;
 
 ２　テストテーブルから、「数学」の平均を取得する
-select ave(数学) from テスト;
+
 ３　テストテーブルから、「英語」の最大と最低を取得する
-select min(英語),max(英語) from テスト;
+
 ４　テストテーブルから、行の数を取得する
-MariaDB [chap06]> select count(*) from テスト
 
 ５　テストテーブルから、男と女のグループ分けをして、性別と、グループごとの合計を取得する
-MariaDB [chap06]> select 性別,sum(国語) from テスト group by 性別;
 
 ６　５での取得結果の、点数が150以上を取得したい
-MariaDB [chap06]> select 性別,sum(国語) from テスト group by 性別 having sum(国語) > 150;
