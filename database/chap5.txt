@@ -22,21 +22,22 @@ xxx || yyy
 ・出力は「xxxyyy」のように、文字列を連結する
 
 
-SELECT 列名
+SELECT 
 CASE 列名か式 WHEN 値１ THEN 値２
 　　          WHEN 値３ THEN 値４
 ELSE 値
-END AS 出力名
+END AS 出力名,
+列名
 FROM テーブル名
 WHERE 条件式
 
-
+・このCASEの部分は列名として扱う
 ・CASEの後の場所が、値１なら、値２に、値３なら値４に置き換える
 ・それ以外なら、ELSEの後ろの値に置き換える
 ・出力名を列名として出力する
 
 
-SELECT 列名
+SELECT 
 CASE WHEN 条件１ THEN 値１
 　　 WHEN 条件２ THEN 値２
 ELSE 値
@@ -90,7 +91,7 @@ WHERE SUBSTRING(列名,数字１,数字２) LIKE '%X%'
 ・条件式に使うことができる
 
 
-SELECT CONTACT(列名１,列名２)
+SELECT CONCAT(列名１,列名２)
 FROM テーブル名
 
 ・列名１と列名２を連結する。「||」と同じ動きをする

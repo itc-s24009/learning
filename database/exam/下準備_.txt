@@ -1,0 +1,19 @@
+ターミナルでdatabaseの実行する方法
+
+・できればBoxes/databaseのvagrant仮想環境内で行う
+・できている人もいるかもしれない。sudo mariadbが実行できれば大丈夫
+
+1.
+sudo apt update
+2.
+sudo apt install mariadb-server
+3.
+sudo mysql_secure_installation
+基本的に質問に「はい」で答えて
+4.
+sudo systemctl start mariadb
+5.
+sudo mariadb
+
+これでmariadbというSQLを扱うものが作れる。そこにテーブルなどを作ってSQLができる
+

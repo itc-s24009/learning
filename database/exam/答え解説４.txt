@@ -1,0 +1,41 @@
+１　文字Aテーブルから、重複を取り除いてすべて取得する
+
+答え
+ select distinct * from 文字A;
+
+
+２　文字Aテーブルから、数字の降順にしてすべて取得する
+
+答え
+select * from 文字A order by 数字 desc;
+
+
+３　文字Aテーブルから、先頭を３行取り除き、上から２行取得する
+
+答え
+select * from 文字A offset 3 rows fetch next 2 rows only;
+
+
+４　文字Aテーブルから、上から３行取得する
+
+答え
+select * from 文字A limit 3;
+
+５　文字Aテーブルと、文字Bテーブルを合わせて取得する
+　　（重複業をそのまま出す）
+
+答え
+select * from 文字A union all select * from 文字B;
+
+
+６　文字テーブルAにあって、文字テーブルBにない行を取得する
+
+答え
+select * from 文字A except select * from 文字B;
+
+
+７　どちらの文字テーブルにもある行を取得する
+
+答え
+select * from 文字A intersect select * from 文字B;
+
